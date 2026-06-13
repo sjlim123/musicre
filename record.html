@@ -1,0 +1,82 @@
+<!doctype html><html lang="ko"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>TIFY · 감정 기록</title><link rel="stylesheet" href="css/style.css"/>
+</head><body>
+<div class="app">
+
+<aside class="sidebar">
+  <div class="logo">TIFY</div>
+  <a href="index.html" class="nav-item"><span class="ico">🏠</span><span>홈</span></a>
+  <a href="result.html" class="nav-item"><span class="ico">🎵</span><span>추천 플레이리스트</span></a>
+  <a href="record.html" class="nav-item active"><span class="ico">💗</span><span>감정 기록</span></a>
+  <a href="saved.html"  class="nav-item"><span class="ico">🔖</span><span>저장한 음악</span></a>
+  <div class="weather-card" id="weatherCard">
+    <div class="wh"><span class="icon" id="wIcon">🌤</span><span class="temp" id="wTemp">--°</span></div>
+    <div class="desc" id="wDesc">날씨 불러오는 중...</div>
+    <div class="loc"  id="wLoc">📍 위치 확인 중</div>
+  </div>
+  <div class="quote"><span class="moon">🌙</span>"음악은 감정을<br/>이해하는 가장<br/>가까운 언어야."</div>
+</aside>
+
+<main class="main">
+  <section class="page">
+    <div class="page-head">
+      <button class="back-btn" onclick="history.back()">←</button>
+      <div style="flex:1"></div>
+    </div>
+
+    <h2>감정 기록 <span class="serif-en">Mood Diary</span></h2>
+
+    <div class="record-layout">
+      <!-- 좌: 달력 -->
+      <div class="calendar-card">
+        <div class="cal-head">
+          <div class="cal-month" id="calMonth">2026년 6월</div>
+          <div class="cal-nav">
+            <button id="prevBtn" type="button" aria-label="이전 달">‹</button>
+            <button id="nextBtn" type="button" aria-label="다음 달">›</button>
+          </div>
+        </div>
+        <div class="cal-grid" id="calGrid"></div>
+      </div>
+
+      <!-- 우: 선택된 날짜 상세 -->
+      <div class="record-detail" id="recordDetail">
+        <p style="text-align:center;color:rgba(255,255,255,0.55);padding:60px 0;line-height:1.7;">
+          날짜를 선택하면<br>그날의 감정 기록을 볼 수 있어요 🌙
+        </p>
+      </div>
+    </div>
+
+    <!-- 하단: 1년 감정 히트맵 (기존 "이번 달 통계" 대체) -->
+    <div class="heatmap-card">
+      <div class="heatmap-header">
+        <span class="heatmap-title">지난 1년 감정 흐름</span>
+        <span class="heatmap-subtitle">Mood Journey</span>
+      </div>
+      <div class="heatmap-grid" id="heatmapGrid"></div>
+      <div class="heatmap-legend">
+        <span>적음</span>
+        <div class="heatmap-legend-bar">
+          <div class="heatmap-legend-cell" style="background:rgba(255,255,255,0.04)"></div>
+          <div class="heatmap-legend-cell" style="background:rgba(232,121,249,0.30)"></div>
+          <div class="heatmap-legend-cell" style="background:rgba(232,121,249,0.55)"></div>
+          <div class="heatmap-legend-cell" style="background:rgba(232,121,249,0.80)"></div>
+          <div class="heatmap-legend-cell" style="background:#e879f9"></div>
+        </div>
+        <span>많음</span>
+        <span style="margin-left:auto;font-style:italic;">색상 = 그날 주 감정 카테고리</span>
+      </div>
+    </div>
+
+  </section>
+</main>
+
+</div>
+<script src="js/starfield.js"></script>
+<script src="js/weather.js"></script>
+<script src="js/recent.js"></script>
+<script src="js/record.js"></script>
+<script src="js/weather-widget.js"></script>
+<script src="js/theme.js"></script>
+</body></html>

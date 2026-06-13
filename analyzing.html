@@ -1,0 +1,46 @@
+<!doctype html><html lang="ko"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>TIFY · 분석 중</title><link rel="stylesheet" href="css/style.css"/>
+</head><body>
+<div class="app">
+
+<aside class="sidebar">
+  <div class="logo">TIFY</div>
+  <a href="index.html"  class="nav-item"><span class="ico">🏠</span><span>홈</span></a>
+  <a href="result.html" class="nav-item active"><span class="ico">🎵</span><span>추천 플레이리스트</span></a>
+  <a href="record.html" class="nav-item"><span class="ico">💗</span><span>감정 기록</span></a>
+  <a href="saved.html"  class="nav-item"><span class="ico">🔖</span><span>저장한 음악</span></a>
+  <div class="weather-card" id="weatherCard">
+    <div class="wh"><span class="icon" id="wIcon">🌤</span><span class="temp" id="wTemp">--°</span></div>
+    <div class="desc" id="wDesc">날씨 불러오는 중...</div>
+    <div class="loc"  id="wLoc">📍 위치 확인 중</div>
+  </div>
+  <div class="quote"><span class="moon">🌙</span>"음악은 감정을<br/>이해하는 가장<br/>가까운 언어야."</div>
+</aside>
+
+<main class="main">
+  <section class="analyzing">
+<!-- 변경 -->
+<h2 class="analyzing-headline" id="analyzingHeadline">감정을 분석하고 있어요 <span class="serif-en">analyzing</span></h2>
+    <!-- 🌀 모핑 구체 -->
+    <div class="morph-orb">
+      <div class="morph-orb-core"></div>
+      <div class="morph-orb-glow"></div>
+      <div class="morph-orb-highlight"></div>
+    </div>
+
+    <div class="analyzing-step" id="analyzingStep">당신의 마음을 읽고 있어요...</div>
+    <div class="input-echo" id="inputEcho"></div>
+  </section>
+</main>
+
+</div>
+<script src="js/starfield.js"></script>
+<script src="js/weather.js"></script>
+<script src="js/weather-widget.js"></script>   <!-- ✨ 추가 -->
+
+<script src="js/theme.js"></script>
+<script src="js/analyzing.js"></script>
+<script src="js/starfield.js"></script>
+<script src="js/recent.js"></script>
+</body></html>

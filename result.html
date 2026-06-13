@@ -1,0 +1,64 @@
+<!doctype html><html lang="ko"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>TIFY · 음악 추천</title><link rel="stylesheet" href="css/style.css"/>
+</head><body>
+<div class="app">
+
+<aside class="sidebar">
+  <div class="logo">TIFY</div>
+  <a href="index.html" class="nav-item"><span class="ico">🏠</span><span>홈</span></a>
+  <a href="result.html" class="nav-item active"><span class="ico">🎵</span><span>추천 플레이리스트</span></a>
+  <a href="record.html" class="nav-item"><span class="ico">💗</span><span>감정 기록</span></a>
+  <a href="saved.html"  class="nav-item"><span class="ico">🔖</span><span>저장한 음악</span></a>
+  <div class="weather-card" id="weatherCard">
+    <div class="wh"><span class="icon" id="wIcon">🌤</span><span class="temp" id="wTemp">--°</span></div>
+    <div class="desc" id="wDesc">날씨 불러오는 중...</div>
+    <div class="loc"  id="wLoc">📍 위치 확인 중</div>
+  </div>
+  <div class="quote">
+    <span class="moon">🌙</span>
+    "음악은 감정을<br/>이해하는 가장<br/>가까운 언어야."
+  </div>
+</aside>
+
+  <main class="main">
+    <section class="page">
+      <div class="page-head">
+        <button class="back-btn" onclick="history.back()">←</button>
+        <div style="flex:1"></div>
+        <a href="saved.html" class="icon-btn" title="저장한 음악">♡</a>
+        <button class="icon-btn" title="더보기">⋯</button>
+      </div>
+<!-- 변경 -->
+<h2>당신의 기분에 어울리는<br>음악을 추천해드려요 <span class="serif-en">Curated</span></h2>      <p class="comfort-msg" id="comfortMsg">오늘 하루도 정말 수고했어요.</p>
+      <div class="mood-filters" id="moodFilters">
+        <button class="mood-filter active" data-filter="전체">전체</button>
+        <button class="mood-filter" data-filter="잔잔한">잔잔한</button>
+        <button class="mood-filter" data-filter="위로">위로</button>
+        <button class="mood-filter" data-filter="새벽 감성">새벽 감성</button>
+        <button class="mood-filter" data-filter="인디">인디</button>
+        <button class="mood-filter" data-filter="어쿠스틱">어쿠스틱</button>
+      </div>
+      <div class="song-list" id="songList"></div>
+    </section>
+    </div><!-- /#songList -->
+
+    <!-- ✨ 새 CTA 버튼들 -->
+    <div class="result-actions">
+      <a href="index.html" class="cta-primary">🔄 다른 감정으로 다시 추천받기</a>
+      <a href="record.html" class="cta-secondary">💗 내 감정 기록 보기</a>
+    </div>
+
+  </section>
+</main>
+  </main>
+</div>
+<script src="js/weather.js"></script>
+<script src="js/playlist.js"></script>
+<script src="js/share-card.js"></script>
+<script src="js/weather-widget.js"></script>   <!-- ✨ 추가 -->
+
+<script src="js/theme.js"></script>
+<script src="js/starfield.js"></script>
+<script src="js/recent.js"></script>
+</body></html>
