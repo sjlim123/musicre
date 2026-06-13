@@ -48,7 +48,7 @@ setTimeout(() => {
 // ─── API 호출 ───
 (async () => {
   try {
-    const res = await fetch('http://localhost:3000/api/playlist', {
+    const res = await fetch('/api/playlist', {
       method:  'POST',
       headers: { 'Content-Type': 'application/json' },
       body:    JSON.stringify({ emotion: mood }),
