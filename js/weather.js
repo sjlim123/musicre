@@ -13,7 +13,7 @@ function getWeatherIcon(condition) {
 
 async function fetchRealWeather(lat, lon) {
   try {
-    const url = `http://localhost:3000/api/weather?lat=${lat}&lon=${lon}`;
+    const url = `/api/weather?lat=${lat}&lon=${lon}`;
     const response = await fetch(url);
     if (!response.ok) throw new Error('서버에서 날씨를 가져오지 못했습니다.');
     return await response.json();
